@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Par ou impar ?</h1>
+     <p>Digite o primeiro numero</p>
+     <input type="text" id="numero1">
+     <button id="enviar1">enviar</button>
+     <br>
+     <p>Digite o segundo numero</p>
+     <input type="text" id="numero2">
+     <button id="verificar">verificar</button>
+
+     <script>
+          document.getElementById("verificar").addEventListener("click", function() {
+          
+            let numero1 = document.getElementById("numero1").value;
+            let numero2 = document.getElementById("numero2").value;
+
+            numero1 = parseInt(numero1);
+            numero2 = parseInt(numero2);
+            
+            let soma = numero1 + numero2
+            soma = parseInt(soma);
+
+            if(isNaN(soma) ){
+                alert("O numero é invalido")
+            }else if (soma  % 2 ===0){
+                alert("O numero é par")
+            }else {
+                alert("O numero é impar")
+            }
+
+            
+
+
+
+
+          })
+     </script>
+</body>
+</html>
